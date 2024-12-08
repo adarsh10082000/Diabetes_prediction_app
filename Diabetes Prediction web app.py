@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-
+#deployment app#
 
 import numpy as np
 import pickle
