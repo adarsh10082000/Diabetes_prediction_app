@@ -7,8 +7,6 @@ import pickle
 def loaded_model():
     with open('./trained_model.sav', 'rb') as f:
         return pickle.load(f)
-
-# ✅ CALL the function to get the model object
 loaded_model = load_model()
 
 def diabetes_prediction(input_data):
