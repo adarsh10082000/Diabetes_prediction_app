@@ -7,9 +7,8 @@ import pickle
 def load_model():
     with open('./trained_model.sav', 'rb') as f:
         return pickle.load(f)
-
-# Load the model globally
-loaded_model = load_model()
+    # Load the model globally
+    loaded_model = load_model()
 
 def diabetes_prediction(input_data):
     try:
