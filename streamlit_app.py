@@ -2,8 +2,12 @@ import streamlit as st
 import numpy as np
 import pickle
 
-# Load the saved model
-loaded_model = pickle.load(open('trained_model.sav', 'rb'))
+# Load the model once at the top
+@st.cache_resource  # This caches the model, so it doesn't reload on every interaction
+def load_model():
+    return pickle.load(open('./trained_model.sav', 'rb'))
+
+loaded_model = load_model()
 
 def diabetes_prediction(input_data):
     try:
