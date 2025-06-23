@@ -4,10 +4,16 @@
 import numpy as np
 import pickle
 import streamlit as st
+import urllib.request
 
 
-# loading the saved model
-loaded_model = pickle.load(open("C:/Users/Admin/Desktop/New folder (2)/trained_model.sav", 'rb'))
+# Function to load model from GitHub
+@st.cache_resource  # Caches the model so it's not downloaded every time
+def load_model():
+    url = 'https://raw.githubusercontent.com/adarsh10082000/Diabetes_prediction_app/main/trained_model.sav'
+    response = urllib.request.urlopen(url)
+    model = pickle.load(response)
+    return model
 
 
 # creating a function for Prediction
