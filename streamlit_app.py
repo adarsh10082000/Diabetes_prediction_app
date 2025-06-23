@@ -1,5 +1,5 @@
 import streamlit as st
-
+import numpy as np
 
 def diabetes_prediction(input_data):
     
