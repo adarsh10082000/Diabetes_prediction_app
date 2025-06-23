@@ -4,7 +4,7 @@ import pickle
 import os
 
 path = os.path.abspath(os.path.dirname(__file__))
-print('pppppppppppppp')
+print('pppppppppppppp'os.path.join(path,'trained_model.sav'))
 # Load the model once and cache it
 @st.cache_resource
 def load_model():
@@ -12,7 +12,7 @@ def load_model():
         return pickle.load(f)
         
 # Load the model globally
-loaded_model = load_model()
+#loaded_model = load_model()
 
 def diabetes_prediction(input_data):
     try:
