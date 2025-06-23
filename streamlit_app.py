@@ -3,12 +3,12 @@ import numpy as np
 import pickle
 import os
 
-path = os.getcwd()
+path = os.path.abs(os.path.dir(__file__))
 print('pppppppppppppp')
 # Load the model once and cache it
 @st.cache_resource
 def load_model():
-    with open('./trained_model.sav', 'rb') as f:
+    with open(os.path.join(path,'trained_model.sav'), 'rb') as f:
         return pickle.load(f)
         
 # Load the model globally
