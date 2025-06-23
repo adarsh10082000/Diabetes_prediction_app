@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 import os
 
-path = os.current_dir()
+path = os.getcwd()
 print('pppppppppppppp')
 # Load the model once and cache it
 @st.cache_resource
