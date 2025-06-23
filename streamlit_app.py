@@ -4,11 +4,10 @@ import pickle
 
 # Load the model once at the top
 @st.cache_resource
-def load_model():
+def loaded_model():
     with open('./trained_model.sav', 'rb') as f:
         return pickle.load(f)
 
-loaded_model = load_model()
 
 def diabetes_prediction(input_data):
     try:
