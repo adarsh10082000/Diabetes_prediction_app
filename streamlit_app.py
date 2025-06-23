@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 # Load the model once at the top
-def loaded_model():
+def load_model():
     with open('./trained_model.sav', 'rb') as f:
         return pickle.load(f)
     loaded_model = load_model()
