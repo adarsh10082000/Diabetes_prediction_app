@@ -4,7 +4,7 @@ import pickle
 import os
 
 path = os.path.abspath(os.path.dirname(__file__))
-print('pppppppppppppp'os.path.join(path,'trained_model.sav'))
+print('pppppppppppppp',os.path.join(path,'trained_model.sav'))
 # Load the model once and cache it
 @st.cache_resource
 def load_model():
