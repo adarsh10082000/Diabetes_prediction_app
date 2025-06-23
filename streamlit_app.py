@@ -1,7 +1,10 @@
 import streamlit as st
 import numpy as np
 import pickle
+import os
 
+path = os.current_dir()
+print('pppppppppppppp')
 # Load the model once and cache it
 @st.cache_resource
 def load_model():
