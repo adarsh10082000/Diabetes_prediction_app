@@ -12,7 +12,7 @@ def load_model():
         return pickle.load(f)
         
 # Load the model globally
-#loaded_model = load_model()
+loaded_model = load_model()
 
 def diabetes_prediction(input_data):
     try:
